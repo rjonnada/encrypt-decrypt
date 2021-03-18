@@ -1,6 +1,4 @@
-package com.rjonnada.decrypt;
-
-import com.rjonnada.util.KeyTool;
+package com.rjonnada;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;

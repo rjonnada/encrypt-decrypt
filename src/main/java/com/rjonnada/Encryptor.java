@@ -1,9 +1,8 @@
-package com.rjonnada.encrypt;
-
-import com.rjonnada.util.KeyTool;
+package com.rjonnada;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 public class Encryptor {
@@ -12,7 +11,7 @@ public class Encryptor {
             SecretKeySpec secretKeySpec = KeyTool.getSecretKey(personalKey);
             Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
             cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
-            return Base64.getEncoder().encodeToString(cipher.doFinal(password.getBytes("UTF-8")));
+            return Base64.getEncoder().encodeToString(cipher.doFinal(password.getBytes(StandardCharsets.UTF_8)));
         } catch (Exception e) {
             e.printStackTrace();
         }
