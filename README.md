@@ -6,3 +6,5 @@ Use the Encryptor class with parameters 1-password and 2-personalKey to generate
 Use the Decryptor class with parameters 1-encryptedPassword and 2-personalKey to generate the original password.
 
 KeyTool util class is used by both Encryptor and Decryptor classes.
+
+Note: Remember to use the identical "personalKey" at both places for the logic to work correctly.
